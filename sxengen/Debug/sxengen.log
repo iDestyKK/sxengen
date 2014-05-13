@@ -1,22 +1,21 @@
-﻿Build started 2014/05/13 (火) 02:27:23.
+﻿Build started 2014/05/13 (火) 11:40:49.
      1>Project "E:\Users\idest_000\SkyDrive\Visual Studio 2010\Projects\sxengen\sxengen\sxengen.vcxproj" on node 2 (build target(s)).
-     1>PrepareForBuild:
-         Creating directory "E:\Users\idest_000\SkyDrive\Visual Studio 2010\Projects\sxengen\Debug\".
-       InitializeBuildStatus:
+     1>InitializeBuildStatus:
          Creating "Debug\sxengen.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt sxengen.cpp
          sxengen.cpp
-     1>e:\users\idest_000\skydrive\visual studio 2010\projects\sxengen\sxengen\sxengen.cpp(42): warning C4800: 'void *' : forcing value to bool 'true' or 'false' (performance warning)
-     1>e:\users\idest_000\skydrive\visual studio 2010\projects\sxengen\sxengen\sxengen.cpp(63): warning C4018: '<' : signed/unsigned mismatch
-     1>e:\users\idest_000\skydrive\visual studio 2010\projects\sxengen\sxengen\sxengen.cpp(64): warning C4244: '+=' : conversion from 'double' to 'byte', possible loss of data
-     1>e:\users\idest_000\skydrive\visual studio 2010\projects\sxengen\sxengen\sxengen.cpp(96): warning C4018: '>=' : signed/unsigned mismatch
-     1>e:\users\idest_000\skydrive\visual studio 2010\projects\sxengen\sxengen\sxengen.cpp(131): warning C4244: 'return' : conversion from 'std::streamoff' to 'unsigned int', possible loss of data
-     1>e:\users\idest_000\skydrive\visual studio 2010\projects\sxengen\sxengen\sxengen.cpp(142): warning C4244: 'initializing' : conversion from 'std::streamoff' to 'unsigned int', possible loss of data
-     1>e:\users\idest_000\skydrive\visual studio 2010\projects\sxengen\sxengen\sxengen.cpp(217): warning C4018: '<' : signed/unsigned mismatch
-     1>e:\users\idest_000\skydrive\visual studio 2010\projects\sxengen\sxengen\sxengen.cpp(228): warning C4018: '<' : signed/unsigned mismatch
+     1>e:\users\idest_000\skydrive\visual studio 2010\projects\sxengen\sxengen\sxengen.cpp(50): warning C4800: 'void *' : forcing value to bool 'true' or 'false' (performance warning)
+     1>e:\users\idest_000\skydrive\visual studio 2010\projects\sxengen\sxengen\sxengen.cpp(71): warning C4018: '<' : signed/unsigned mismatch
+     1>e:\users\idest_000\skydrive\visual studio 2010\projects\sxengen\sxengen\sxengen.cpp(72): warning C4244: '+=' : conversion from 'double' to 'byte', possible loss of data
+     1>e:\users\idest_000\skydrive\visual studio 2010\projects\sxengen\sxengen\sxengen.cpp(104): warning C4018: '>=' : signed/unsigned mismatch
+     1>e:\users\idest_000\skydrive\visual studio 2010\projects\sxengen\sxengen\sxengen.cpp(139): warning C4244: 'return' : conversion from 'std::streamoff' to 'unsigned int', possible loss of data
+     1>e:\users\idest_000\skydrive\visual studio 2010\projects\sxengen\sxengen\sxengen.cpp(150): warning C4244: 'initializing' : conversion from 'std::streamoff' to 'unsigned int', possible loss of data
+     1>e:\users\idest_000\skydrive\visual studio 2010\projects\sxengen\sxengen\sxengen.cpp(283): warning C4018: '<' : signed/unsigned mismatch
+     1>e:\users\idest_000\skydrive\visual studio 2010\projects\sxengen\sxengen\sxengen.cpp(294): warning C4018: '<' : signed/unsigned mismatch
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Users\idest_000\SkyDrive\Visual Studio 2010\Projects\sxengen\Debug\sxengen.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\sxengen.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\Users\idest_000\SkyDrive\Visual Studio 2010\Projects\sxengen\Debug\sxengen.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Users\idest_000\SkyDrive\Visual Studio 2010\Projects\sxengen\Debug\sxengen.lib" /MACHINE:X86 Debug\sxengen.obj
+         LINK : E:\Users\idest_000\SkyDrive\Visual Studio 2010\Projects\sxengen\Debug\sxengen.exe not found or not built by the last incremental link; performing full link
          sxengen.vcxproj -> E:\Users\idest_000\SkyDrive\Visual Studio 2010\Projects\sxengen\Debug\sxengen.exe
        Manifest:
          C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"E:\Users\idest_000\SkyDrive\Visual Studio 2010\Projects\sxengen\Debug\sxengen.exe;#1" /manifest Debug\sxengen.exe.intermediate.manifest
@@ -27,4 +26,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.00
+Time Elapsed 00:00:01.30

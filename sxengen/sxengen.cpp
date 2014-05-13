@@ -10,6 +10,14 @@
 
 	data_txt goes in the following format:
 
+		[INFORMATION]
+			name = <name>
+			author = <name>
+			year = <name>
+			length = <name>
+			genre = <name>
+			album = <name>
+			comment = <name>
 		[AUDIO]
 			file = <name>
 			file = <name>
@@ -35,7 +43,7 @@ using namespace std;
 
 typedef unsigned char byte;
 
-const int version = 1; //The current version of the file.
+const int version = 2; //The current version of the file.
 
 bool file_exists(string filename) {
 	ifstream ifile(filename);
@@ -163,12 +171,60 @@ int main() {
 	string filename = "data_txt.ini";
 	string tmp_txt;
 
+	string song_name = "", song_author = "", song_genre = "", song_album = "", song_length = "", song_comment = "", song_year = "";
+
 	vector<string> AUDIO_FILES;
 	vector<string> MISC_FILES;
 
 	data_txt.open(filename);
 	while (data_txt.eof() == false) { //Funny, my professor told me to never use "eof"... Ah well. :P
 		getline(data_txt,tmp_txt);
+		if (tmp_txt == "[INFORMATION]") {
+			while (data_txt.eof() == false) {
+				getline(data_txt,tmp_txt);
+				istringstream file_check;
+				file_check.clear();
+				file_check.str(tmp_txt);
+				string file_checker;
+				file_check >> file_checker;
+				if (file_checker == "name") {
+					unsigned int epos = tmp_txt.find("= ") + 2;
+					song_name = tmp_txt.substr(epos,tmp_txt.length() - epos);
+				}
+				else
+				if (file_checker == "author") {
+					unsigned int epos = tmp_txt.find("= ") + 2;
+					song_author = tmp_txt.substr(epos,tmp_txt.length() - epos);
+				}
+				else
+				if (file_checker == "year") {
+					unsigned int epos = tmp_txt.find("= ") + 2;
+					song_year = tmp_txt.substr(epos,tmp_txt.length() - epos);
+				}
+				else
+				if (file_checker == "length") {
+					unsigned int epos = tmp_txt.find("= ") + 2;
+					song_length = tmp_txt.substr(epos,tmp_txt.length() - epos);
+				}
+				else
+				if (file_checker == "genre") {
+					unsigned int epos = tmp_txt.find("= ") + 2;
+					song_genre = tmp_txt.substr(epos,tmp_txt.length() - epos);
+				}
+				else
+				if (file_checker == "album") {
+					unsigned int epos = tmp_txt.find("= ") + 2;
+					song_album = tmp_txt.substr(epos,tmp_txt.length() - epos);
+				}
+				else
+				if (file_checker == "comment") {
+					unsigned int epos = tmp_txt.find("= ") + 2;
+					song_comment = tmp_txt.substr(epos,tmp_txt.length() - epos);
+				}
+				else
+					break;
+			}
+		}
 		if (tmp_txt == "[AUDIO]") {
 			while (data_txt.eof() == false) {
 				getline(data_txt,tmp_txt);
@@ -206,8 +262,18 @@ int main() {
 
 	cout << "Beginning writing file..." << endl << endl;
 	ofstream pak;
-	pak.open("pak.song", ios::binary);
-	pak << "DERPG_SONGPAK" << (byte)(version / 256) << (byte)(version & 256);
+	pak.open("pak.sxen", ios::binary);
+	pak << "DERPG_SONGPAK" << (byte)(version / 256) << (byte)(version % 256);
+
+	//Write Song Information
+	pak << (byte) song_name.length() << song_name;
+	pak << (byte) song_author.length() << song_author;
+	pak << (byte) song_year.length() << song_year;
+	pak << (byte) song_length.length() << song_length;
+	pak << (byte) song_genre.length() << song_genre;
+	pak << (byte) song_album.length() << song_album;
+	pak << (byte) song_comment.length() << song_comment;
+
 	//Begin header for Audio Files
 	pak << (byte) 0xFF;
 	pak << (byte) 5;
