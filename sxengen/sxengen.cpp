@@ -207,7 +207,7 @@ int main() {
 	cout << "Beginning writing file..." << endl << endl;
 	ofstream pak;
 	pak.open("pak.song", ios::binary);
-	pak << "DERPG_SONGPAK" << (byte)(version / 256) << (byte)(version & 256);
+	pak << "DERPG_SONGPAK" << (byte)(version / 256) << (byte)(version % 256);
 	//Begin header for Audio Files
 	pak << (byte) 0xFF;
 	pak << (byte) 5;
